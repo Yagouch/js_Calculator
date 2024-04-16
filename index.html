@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
     <title>JS problems</title>
@@ -15,16 +16,41 @@
         <h1>Road to Calculadora</h1>
     </header>
     <div class="container">
-        <section class="test">
-            <form id="form">
-                <h2>Sumador</h2> 
-                <input id="num1" class="nums" type="number">
-                <p>+</p>
-                <input id="num2" class="nums" type="number">
-                <input class="button" type="submit">
-            </form>
-            <h2 id="answer">La respuesta es 0</h2>
-        </section>
+        <div class="calc">
+            <table>
+                <tr>
+                    <td class="texto" colspan="4"><input class="verde jersey-10-regular" type="text" id="result"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="amplio"><input class="morado" type="button" value="AC" onclick="clean()"></td>
+                    <td colspan="2" class="amplio"><input class="morado" type="button" value="DEL" onclick="delOne()"></td>
+                </tr>
+                <tr>
+                    <td><input class="gris" type="button" value="7" onclick="dig('7')"></td>
+                    <td><input class="gris" type="button" value="8" onclick="dig('8')"></td>
+                    <td><input class="gris" type="button" value="9" onclick="dig('9')"></td>
+                    <td><input class="gris" type="button" value="/"></td>
+                </tr>
+                <tr>
+                    <td><input class="gris" type="button" value="4" onclick="dig('4')"></td>
+                    <td><input class="gris" type="button" value="5" onclick="dig('5')"></td>
+                    <td><input class="gris" type="button" value="6" onclick="dig('6')"></td>
+                    <td><input class="gris" type="button" value="*"></td>
+                </tr>
+                <tr>
+                    <td><input class="gris" type="button" value="1" onclick="dig('1')"></td>
+                    <td><input class="gris" type="button" value="2" onclick="dig('2')"></td>
+                    <td><input class="gris" type="button" value="3" onclick="dig('3')"></td>
+                    <td><input class="gris" type="button" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input class="gris" type="button" value="0"></td>
+                    <td><input class="gris" type="button" value="."></td>
+                    <td><input class="gris" type="button" value="=" onclick="solve()"></td>
+                    <td><input class="gris" type="button" value="+" onclick="dig('+')"></td>
+                </tr>
+            </table>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
