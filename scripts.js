@@ -17,6 +17,14 @@ function solve() {
     document.getElementById("result").value = y
 }
 
+let saveStack = []
+
+function save(){
+    if (length(saveStack) < 10){
+        saveStack.push()
+    }
+}
+
 // const form = document.querySelector('#form')
 
 // form.addEventListener('click', validarFormulario)
