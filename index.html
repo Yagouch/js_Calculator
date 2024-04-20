@@ -19,11 +19,16 @@
         <div class="calc">
             <table>
                 <tr>
-                    <td class="texto" colspan="4"><input class="verde jersey-10-regular" type="text" id="result"></td>
+                    <td colspan="4"><input class="verde jersey-10-regular" type="text" id="memory"></td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="amplio"><input class="morado" type="button" value="AC" onclick="clean()"></td>
-                    <td colspan="2" class="amplio"><input class="morado" type="button" value="DEL" onclick="delOne()"></td>
+                    <td class="padding-bottom" colspan="4"><input class="verde jersey-10-regular" type="text" id="result"></td>
+                </tr>
+                <tr>
+                    <td><input class="morado" type="button" value="AC" onclick="clean()"></td>
+                    <td><input class="morado" type="button" value="<" onclick="memoUp()"></td>
+                    <td><input class="morado" type="button" value=">" onclick="memoDown()"></td>
+                    <td><input class="morado" type="button" value="DEL" onclick="delOne()"></td>
                 </tr>
                 <tr>
                     <td><input class="gris" type="button" value="7" onclick="dig('7')"></td>

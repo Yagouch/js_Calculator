@@ -13,36 +13,36 @@ function delOne() {
 
 function solve() {
     let x = document.getElementById("result").value;
+    save(x)
     let y = eval(x);
     document.getElementById("result").value = y
 }
 
 let saveStack = []
+index = 0
 
-function save(){
-    if (length(saveStack) < 10){
-        saveStack.push()
+function save(item){
+    if (saveStack.length < 10){
+        saveStack.push(item)
+        document.getElementById('memory').value = item;
+        index++;
+    } else {
+        saveStack.splice(0,1) // Elimina el primer elemento
+        saveStack.push(item)
+        document.getElementById('memory').value = item;
     }
 }
 
-// const form = document.querySelector('#form')
+function memoUp() {
+    if (index - 1 > 0){
+        index -= 1;
+        document.getElementById('memory').value = saveStack[index-1];
+    }
+}
 
-// form.addEventListener('click', validarFormulario)
-
-
-// function validarFormulario(e) {
-//     e.preventDefault() //Para que no resetee el form y se puedan 
-//     //trabajar con los datos
-//     let num1 = parseFloat(document.querySelector('#num1').value)
-//     let num2 = parseFloat(document.querySelector('#num2').value)
-//     if (isNaN(num1)) {
-//         num1 = 0;
-//     }
-//     if (isNaN(num2)) {
-//         num2 = 0;
-//     }
-
-//     const answer = document.getElementById('answer')
-
-//     answer.textContent = `La respuesta es ${num1 + num2}`
-// }
+function memoDown(){
+    if ((index + 1) <= saveStack.length) {
+        index += 1;
+        document.getElementById('memory').value = saveStack[index-1];
+    }
+}

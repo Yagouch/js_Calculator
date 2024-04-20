@@ -47,7 +47,7 @@ h1 {
 .calc {
     background-color: rgb(84, 85, 96);
     color: white;
-    width: 250px;
+    width: 400px;
     margin: 0 auto;
     padding: 30px 10px;
     border-radius: 10px;
@@ -69,7 +69,7 @@ input[type="button"] {
 }
 
 .amplio {
-    width: 100px;
+    width: 100%;
 }
 .morado {
     background-color: rgb(142, 97, 121);
@@ -93,7 +93,10 @@ input[type="text"]{
     font-size: xx-large;
 
 }
-.texto {
+.padding-bottom {
     padding-bottom:  20px;
 }
 
+td {
+    width: 80px;
+}
